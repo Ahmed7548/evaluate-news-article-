@@ -6,7 +6,7 @@ import {displayError} from "./displayError"
 function handleSubmit(event) {
 	event.preventDefault();
 	const urlInput=document.getElementById("URL")
-	// check what text was put into the form field
+	
 	let formText = urlInput.value.trim();
 
 	urlInput.value=""

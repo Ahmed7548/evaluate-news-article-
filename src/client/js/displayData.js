@@ -1,9 +1,8 @@
 const displayData = (data) => {
     const section = document.getElementById("display-result")
     const result = document.createElement('div')
-    result.innerHTML=` <div class="result">
+    result.innerHTML=`<div class="result">
     <div id="results">
-        <div class="result-core">
         <p>score tag: ${data.score_tag.toLowerCase()}</p>
         <p>agreement: ${data.agreement.toLowerCase()}</p>
         <p>subjictivity: ${data.subjectivity.toLowerCase()}</p>
