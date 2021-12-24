@@ -1,0 +1,11 @@
+@use  "./global" as * ;
+
+footer{
+    width: 100%;
+    height: 10vh;
+    @include bgColor-color($primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

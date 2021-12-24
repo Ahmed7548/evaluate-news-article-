@@ -1,0 +1,22 @@
+$primary-color:rgb(34, 33, 33);
+
+@function set-color-bg($color){
+    @if (lightness($color)>70){
+        @return #333
+    } @else{
+        @return #fff
+    }
+}; 
+
+@mixin bgColor-color($color) {
+    background-color: $color;
+    color: set-color-bg($color);
+}
+@mixin button1($color) {
+    @include bgColor-color($color);
+    border: none;
+    outline: none;
+    &:hover{
+        background-color: darken($color, 10%);
+    }
+}
