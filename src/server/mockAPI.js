@@ -1,5 +1,6 @@
+require("dotenv").config()
 const fetch = require("node-fetch");
-const key = "9cf410426fdcbc98be215f527dfc9cb1";
+const key = process.env.API_KEY;
 
 const API_Calling = async (url) => {
 	const response = await fetch(

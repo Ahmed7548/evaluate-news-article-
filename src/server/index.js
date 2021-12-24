@@ -3,7 +3,6 @@ const express = require("express");
 const cors = require("cors");
 const API_Calling = require("./mockAPI.js");
 const console = require("console");
-const { response } = require("express");
 
 
 
@@ -32,7 +31,7 @@ app.post("/receive",  (req, res) => {
 })
 
 app.post("/test", async (req, res)=> {
-    const url=  req.body.url
+    const url = req.body.url
     API_Calling(url).then(data => res.send(data)).catch(err => {
         res.send({error: err.message})
     })
