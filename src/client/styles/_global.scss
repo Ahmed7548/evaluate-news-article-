@@ -1,4 +1,5 @@
 $primary-color:rgb(7, 54, 63);
+$background-color:rgb(212, 212, 212);
 
 @function set-color-bg($color){
     @if (lightness($color)>70){

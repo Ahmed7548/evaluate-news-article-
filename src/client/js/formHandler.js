@@ -4,6 +4,7 @@ import { displayData } from "./displayData"
 import {displayError} from "./displayError"
 
 function handleSubmit(event) {
+	const section= document.getElementById("display-result")
 	event.preventDefault();
 	const urlInput=document.getElementById("URL")
 	
@@ -16,7 +17,14 @@ function handleSubmit(event) {
 	if (!url) {
 		return
 	}
-	
+	section.innerHTML = `
+	<div class="result">
+	<p class= "animation"></p>
+	<p class= "animation"></p>
+	<p class= "animation"></p>
+	<p class= "animation"></p>
+	<p class= "animation"></p>
+	</div>`
 	fetchData({ url },displayData,displayError)
 }
 

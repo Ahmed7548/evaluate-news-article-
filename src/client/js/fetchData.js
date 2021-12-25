@@ -1,7 +1,6 @@
 export const fetchData = async (url,dataDisplayer,errorDisplayer) => {
     const section = document.getElementById("display-result")
     //reseting the data displayed
-    section.innerHTML=""
 
 
     const response= await fetch(`http://localhost:8081/test`, {
@@ -17,6 +16,8 @@ export const fetchData = async (url,dataDisplayer,errorDisplayer) => {
         if (data.error) {
             throw new Error (data.error)
         }
+        
+        section.innerHTML=""
         dataDisplayer(data)
     } catch (err) {
         errorDisplayer(err)
