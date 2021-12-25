@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 import { displayData } from "../src/client/js/displayData";
+import {checkPolarity} from "../src/client/js/checkPolarity"
 
 document.body.innerHTML = `
 <div>
@@ -9,7 +10,7 @@ document.body.innerHTML = `
 </div>
 `;
 const data = {
-	score_tag: "score_tag",
+	score_tag: "P",
 	agreement: "agreement",
 	subjectivity: "subjectivity",
 	confidence: "confidence",
@@ -25,11 +26,11 @@ test("data displayin", () => {
 	expect(document.getElementById("display-result").innerHTML)
 		.toBe(`<div><div class="result">
     <div id="results">
-        <p>score tag: ${data.score_tag.toLowerCase()}</p>
-        <p>agreement: ${data.agreement.toLowerCase()}</p>
-        <p>subjictivity: ${data.subjectivity.toLowerCase()}</p>
-        <p>confidence: ${data.confidence.toLowerCase()}</p>
-        <p>irony: ${data.irony.toLowerCase()}</p>
+        <p>Score tag (global polarity): ${data.score_tag} (${checkPolarity(data.score_tag)})</p>
+        <p>Agreement: ${data.agreement.toLowerCase()}</p>
+        <p>Subjictivity: ${data.subjectivity.toLowerCase()}</p>
+        <p>Confidence: ${data.confidence.toLowerCase()}</p>
+        <p>Irony: ${data.irony.toLowerCase()}</p>
         </div>
     </div></div>`);
 });

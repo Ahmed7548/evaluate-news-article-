@@ -1,5 +1,6 @@
 export const fetchData = async (url,dataDisplayer,errorDisplayer) => {
     const section = document.getElementById("display-result")
+    //reseting the data displayed
     section.innerHTML=""
 
 
@@ -21,9 +22,5 @@ export const fetchData = async (url,dataDisplayer,errorDisplayer) => {
         errorDisplayer(err)
         }
 }
-// .then((res) => res.json())
-// .then(function (res) {
-// 	console.log(res);
-// 	document.getElementById("results").innerHTML = res.response.url;
-// });
+
 

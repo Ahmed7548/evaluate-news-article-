@@ -2,10 +2,16 @@
 
 footer{
     width: 100%;
-    height: 10vh;
+    height: fit-content;
     @include bgColor-color($primary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    p{
+        padding: 1rem;
+    }
+    small{
+        padding: 1rem;
+    }
 }

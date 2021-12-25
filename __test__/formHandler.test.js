@@ -22,5 +22,6 @@ test("formHandle return when submiting an an empty form", async() => {
     form.addEventListener("submit", (e) => {
         expect(handleSubmit(e)).not.toBeDefined()
     })
+    
     form.submit()
 })

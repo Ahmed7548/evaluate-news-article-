@@ -1,4 +1,4 @@
-$primary-color:rgb(34, 33, 33);
+$primary-color:rgb(7, 54, 63);
 
 @function set-color-bg($color){
     @if (lightness($color)>70){
@@ -17,6 +17,6 @@ $primary-color:rgb(34, 33, 33);
     border: none;
     outline: none;
     &:hover{
-        background-color: darken($color, 10%);
+        background-color: darken($color, 5%);
     }
 }
