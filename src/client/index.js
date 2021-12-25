@@ -11,7 +11,7 @@ import "./styles/footer.scss"
 const form = document.getElementById("search-form")
 
 const urlInput = document.getElementById('URL')
-
+// validating the url input on each keypress
 urlInput.addEventListener("keyup", () => {
     urlChecker(urlInput.value)
 })
@@ -19,9 +19,5 @@ urlInput.addEventListener("keyup", () => {
 form.addEventListener("submit", (e) => {
     handleSubmit(e)
 })
-
-console.log("start"+urlChecker("https://example.com/")+ "end")
-
-console.log("CHANGE!!");
 
 

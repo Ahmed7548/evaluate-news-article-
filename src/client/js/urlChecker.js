@@ -1,12 +1,10 @@
 const urlChecker = (inputText) => {
 	const submitButton = document.getElementById("submit-button");
 	const errorMessage = document.getElementById("error");
-	console.log(inputText);
 	try {
 		//constructing a url object 
 		const url = new URL(inputText);
 		// url object will throw an error if the text given is not valid
-		console.log("working");
 		errorMessage.innerText = "";
 		submitButton.disabled = false;
 		//rreturn a string of the valid url
