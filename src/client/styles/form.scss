@@ -15,8 +15,8 @@ form{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 0.5px solid $primary-color;
-    background-color: darken($background-color,10%);
+    // border: 0.5px solid $primary-color;
+    background-color: lighten($background-color,5%);
 box-shadow:
 10.3px 7.5px 10px rgba(0, 0, 0, 0.09),
         82px 60px 80px rgba(0, 0, 0, 0.07)

@@ -23,10 +23,8 @@ const API_Calling = async (url) => {
             confidence : data.confidence,
             irony : data.irony
         }
-        console.log(sample);
         return sample
     } catch (err) {
-        console.log(err)
         throw new Error (err.message)
         }
 };

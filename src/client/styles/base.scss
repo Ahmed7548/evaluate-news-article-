@@ -21,7 +21,7 @@ main {
         width: 400px;
         height: fit-content;
         padding: 2rem;
-		background-color: darken($background-color,10%);
+		background-color: lighten($background-color,10%);
         box-shadow:
         10.3px 7.5px 10px rgba(0, 0, 0, 0.09),
         82px 60px 80px rgba(0, 0, 0, 0.07)
@@ -34,16 +34,16 @@ main {
 		  padding: 0;
 		  height: 2rem;
 		  margin: 0.5rem auto;
-		  background-color: rgb(160, 160, 160);
+		  background-color: rgb(172, 172, 172);
 		  border: none;
 		  position: relative;
 		  overflow: hidden;
 		  &::after{
 			  content: "";
-			  width: 3rem;
+			  width: 4rem;
 			  height: 100%;
 			  position: absolute;
-			  background-image: linear-gradient(to right,rgb(160, 160, 160),darken(rgb(160, 160, 160),10%), rgb(160, 160, 160));
+			  background-image: linear-gradient(to right,rgb(172, 172, 172),lighten(rgb(172, 172, 172),5%), rgb(172, 172, 172));
 			  z-index: 100;
 			  animation: load 0.7s linear infinite;
 			  @keyframes load {
