@@ -47,7 +47,6 @@
         </footer>
         <script>
             if ('serviceWorker' in navigator) {
-                console.log("work")
                 window.addEventListener('load', () => {
                     navigator.serviceWorker.register('./service-worker.js');
                 });
